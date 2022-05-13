@@ -25,5 +25,3 @@ readStream.on('close', () => {
   writeableStream.end();
   console.log(endMessage);
 });
-
-
