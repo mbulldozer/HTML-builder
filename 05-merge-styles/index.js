@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('node:path');
 
-const folderPath = path.resolve('05-merge-styles/styles');
-const bundlePath = path.resolve('05-merge-styles/project-dist/bundle.css');
+const folderPath = path.join(__dirname,'styles');
+const bundlePath = path.join(__dirname,'project-dist/bundle.css');
 const writeableStream = fs.createWriteStream(bundlePath);
 
 fs.readdir(folderPath, {withFileTypes: true}, (err, files) => {

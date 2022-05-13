@@ -3,7 +3,7 @@ const path = require('node:path');
 const readline = require('readline');
 const { stdin: input, stdout: output } = require('process');
 
-const writeablePath = path.resolve('02-write-file/out.txt');
+const writeablePath = path.join(__dirname, 'out.txt');
 const writeableStream = fs.createWriteStream(writeablePath);
 const readStream = readline.createInterface({ input, output });
 const startMessage = '\nPlease, enter a message to write in a file:\n';
